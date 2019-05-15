@@ -17,7 +17,7 @@ namespace EF6.CodeFirstFromDB.Console
 
         public int Id { get; set; }
 
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         public string Description { get; set; }
 
@@ -33,5 +33,7 @@ namespace EF6.CodeFirstFromDB.Console
         public virtual ICollection<Tags> Tags { get; set; }
 
         public Category Category { get; set; }
+
+        public DateTime? DatePublished { get; set; }
     }
 }

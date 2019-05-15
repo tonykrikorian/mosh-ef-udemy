@@ -1,5 +1,6 @@
 namespace EF6.CodeFirstFromDB.Console
 {
+    using EF6.CodeFirstFromDB.Console.Entities;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -30,5 +31,7 @@ namespace EF6.CodeFirstFromDB.Console
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tags> Tags { get; set; }
+
+        public Category Category { get; set; }
     }
 }

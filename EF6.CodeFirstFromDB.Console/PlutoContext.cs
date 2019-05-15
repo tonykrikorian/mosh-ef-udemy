@@ -4,6 +4,7 @@ namespace EF6.CodeFirstFromDB.Console
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using EF6.CodeFirstFromDB.Console.Entities;
 
     public partial class PlutoContext : DbContext
     {
@@ -15,6 +16,7 @@ namespace EF6.CodeFirstFromDB.Console
         public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Courses> Courses { get; set; }
         public virtual DbSet<Tags> Tags { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

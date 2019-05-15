@@ -83,6 +83,10 @@
     <Compile Include="Migrations\201905150201147_DeleteCategoryColumnFromCoursesTable.Designer.cs">
       <DependentUpon>201905150201147_DeleteCategoryColumnFromCoursesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905150206005_DeleteCategoriesTable.cs" />
+    <Compile Include="Migrations\201905150206005_DeleteCategoriesTable.Designer.cs">
+      <DependentUpon>201905150206005_DeleteCategoriesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
@@ -114,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905150201147_DeleteCategoryColumnFromCoursesTable.resx">
       <DependentUpon>201905150201147_DeleteCategoryColumnFromCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905150206005_DeleteCategoriesTable.resx">
+      <DependentUpon>201905150206005_DeleteCategoriesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

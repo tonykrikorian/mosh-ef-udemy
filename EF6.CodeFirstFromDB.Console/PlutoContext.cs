@@ -16,8 +16,7 @@ namespace EF6.CodeFirstFromDB.Console
         public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Courses> Courses { get; set; }
         public virtual DbSet<Tags> Tags { get; set; }
-        public DbSet<Category> Categories { get; set; }
-
+      
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Authors>()

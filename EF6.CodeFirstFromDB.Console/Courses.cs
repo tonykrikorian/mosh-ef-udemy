@@ -34,6 +34,5 @@ namespace EF6.CodeFirstFromDB.Console
 
         public Category Category { get; set; }
 
-        public DateTime? DatePublished { get; set; }
     }
 }

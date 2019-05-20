@@ -51,6 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
+    <Compile Include="EntityConfigurations\ContactoConfiguration.cs" />
+    <Compile Include="EntityConfigurations\EmpresaConfiguration.cs" />
+    <Compile Include="EntityConfigurations\SolucionTecnologicaConfiguration.cs" />
+    <Compile Include="EntityConfigurations\TipoEmpresaConfiguration.cs" />
     <Compile Include="Migrations\201905190017114_CreateEmpresasTable.cs" />
     <Compile Include="Migrations\201905190017114_CreateEmpresasTable.Designer.cs">
       <DependentUpon>201905190017114_CreateEmpresasTable.cs</DependentUpon>
@@ -163,6 +167,12 @@
     <EmbeddedResource Include="Migrations\201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.resx">
       <DependentUpon>201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FluentAPI\FluentAPI\FluentAPI.csproj">
+      <Project>{415B010B-3387-41C8-8649-98E423189105}</Project>
+      <Name>FluentAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6.Demo.Console", "EF6.Dem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6.CodeFirstFromDB.Console", "EF6.CodeFirstFromDB.Console\EF6.CodeFirstFromDB.Console.csproj", "{56EEA79C-C0E7-44CD-8F29-19228EA05618}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentAPI", "FluentAPI\FluentAPI\FluentAPI.csproj", "{415B010B-3387-41C8-8649-98E423189105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6.FCHModelExample.Console", "EF6.FCHModelExample.Console\EF6.FCHModelExample.Console.csproj", "{60845356-5BDE-48F6-A64F-B18095F77BC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{56EEA79C-C0E7-44CD-8F29-19228EA05618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56EEA79C-C0E7-44CD-8F29-19228EA05618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56EEA79C-C0E7-44CD-8F29-19228EA05618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415B010B-3387-41C8-8649-98E423189105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415B010B-3387-41C8-8649-98E423189105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415B010B-3387-41C8-8649-98E423189105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415B010B-3387-41C8-8649-98E423189105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60845356-5BDE-48F6-A64F-B18095F77BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60845356-5BDE-48F6-A64F-B18095F77BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60845356-5BDE-48F6-A64F-B18095F77BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60845356-5BDE-48F6-A64F-B18095F77BC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

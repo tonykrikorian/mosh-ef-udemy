@@ -55,6 +55,8 @@
     <Compile Include="Authors.cs" />
     <Compile Include="Courses.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Genre.cs" />
+    <Compile Include="Entities\Video.cs" />
     <Compile Include="Migrations\201905150110265_InitialModel.cs" />
     <Compile Include="Migrations\201905150110265_InitialModel.Designer.cs">
       <DependentUpon>201905150110265_InitialModel.cs</DependentUpon>
@@ -86,6 +88,30 @@
     <Compile Include="Migrations\201905150206005_DeleteCategoriesTable.cs" />
     <Compile Include="Migrations\201905150206005_DeleteCategoriesTable.Designer.cs">
       <DependentUpon>201905150206005_DeleteCategoriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905182024370_CreateVideoTable.cs" />
+    <Compile Include="Migrations\201905182024370_CreateVideoTable.Designer.cs">
+      <DependentUpon>201905182024370_CreateVideoTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905182025427_CreateGenresTable.cs" />
+    <Compile Include="Migrations\201905182025427_CreateGenresTable.Designer.cs">
+      <DependentUpon>201905182025427_CreateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905182028186_CreateManyToManyRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905182028186_CreateManyToManyRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905182028186_CreateManyToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905182029544_DeleteToManyRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905182029544_DeleteToManyRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905182029544_DeleteToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905182031279_CreateOneToOneRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905182031279_CreateOneToOneRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905182031279_CreateOneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905182034132_AddClasificationColumnToVideosTable.cs" />
+    <Compile Include="Migrations\201905182034132_AddClasificationColumnToVideosTable.Designer.cs">
+      <DependentUpon>201905182034132_AddClasificationColumnToVideosTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -121,6 +147,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905150206005_DeleteCategoriesTable.resx">
       <DependentUpon>201905150206005_DeleteCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905182024370_CreateVideoTable.resx">
+      <DependentUpon>201905182024370_CreateVideoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905182025427_CreateGenresTable.resx">
+      <DependentUpon>201905182025427_CreateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905182028186_CreateManyToManyRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905182028186_CreateManyToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905182029544_DeleteToManyRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905182029544_DeleteToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905182031279_CreateOneToOneRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905182031279_CreateOneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905182034132_AddClasificationColumnToVideosTable.resx">
+      <DependentUpon>201905182034132_AddClasificationColumnToVideosTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

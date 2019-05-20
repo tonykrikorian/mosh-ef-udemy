@@ -1,4 +1,5 @@
-﻿using EF6.FCHModelExample.Console.Model;
+﻿using EF6.FCHModelExample.Console.EntityConfigurations;
+using EF6.FCHModelExample.Console.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -24,7 +25,10 @@ namespace EF6.FCHModelExample.Console
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new EmpresaConfiguration());
+            modelBuilder.Configurations.Add(new ContactoConfiguration());
+            modelBuilder.Configurations.Add(new SolucionTecnologicaConfiguration());
+            modelBuilder.Configurations.Add(new TipoEmpresaConfiguration());
         }
     }
 }

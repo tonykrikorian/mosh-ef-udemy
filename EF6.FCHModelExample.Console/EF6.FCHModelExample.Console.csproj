@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60845356-5BDE-48F6-A64F-B18095F77BC7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EF6.FCHModelExample.Console</RootNamespace>
+    <AssemblyName>EF6.FCHModelExample.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext.cs" />
+    <Compile Include="Migrations\201905190017114_CreateEmpresasTable.cs" />
+    <Compile Include="Migrations\201905190017114_CreateEmpresasTable.Designer.cs">
+      <DependentUpon>201905190017114_CreateEmpresasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190019358_CreateSolucionesTecnologicasTable.cs" />
+    <Compile Include="Migrations\201905190019358_CreateSolucionesTecnologicasTable.Designer.cs">
+      <DependentUpon>201905190019358_CreateSolucionesTecnologicasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190023312_CreateContactosTable.cs" />
+    <Compile Include="Migrations\201905190023312_CreateContactosTable.Designer.cs">
+      <DependentUpon>201905190023312_CreateContactosTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190024415_CreateTiposEmpresaTable.cs" />
+    <Compile Include="Migrations\201905190024415_CreateTiposEmpresaTable.Designer.cs">
+      <DependentUpon>201905190024415_CreateTiposEmpresaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190026011_CreateEspecialidadesEmpresasTable.cs" />
+    <Compile Include="Migrations\201905190026011_CreateEspecialidadesEmpresasTable.Designer.cs">
+      <DependentUpon>201905190026011_CreateEspecialidadesEmpresasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190029235_CreateOneToManyRelationshipBetweenEmpresasAndSolucionesTecnologicasTables.cs" />
+    <Compile Include="Migrations\201905190029235_CreateOneToManyRelationshipBetweenEmpresasAndSolucionesTecnologicasTables.Designer.cs">
+      <DependentUpon>201905190029235_CreateOneToManyRelationshipBetweenEmpresasAndSolucionesTecnologicasTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190031098_CreateOneToManyRelationshipBetweenEmpresasAndContactosTables.cs" />
+    <Compile Include="Migrations\201905190031098_CreateOneToManyRelationshipBetweenEmpresasAndContactosTables.Designer.cs">
+      <DependentUpon>201905190031098_CreateOneToManyRelationshipBetweenEmpresasAndContactosTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190039140_CreateOnoToZeroRelationshipBetweenEmpresasAndTipoEmpresasTable.cs" />
+    <Compile Include="Migrations\201905190039140_CreateOnoToZeroRelationshipBetweenEmpresasAndTipoEmpresasTable.Designer.cs">
+      <DependentUpon>201905190039140_CreateOnoToZeroRelationshipBetweenEmpresasAndTipoEmpresasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190046382_CreateManyToManyRelationshipBetweenEmpresasAndEspecialidadesEmpresasTable.cs" />
+    <Compile Include="Migrations\201905190046382_CreateManyToManyRelationshipBetweenEmpresasAndEspecialidadesEmpresasTable.Designer.cs">
+      <DependentUpon>201905190046382_CreateManyToManyRelationshipBetweenEmpresasAndEspecialidadesEmpresasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190048565_RenameContactoesTableToContactosTable.cs" />
+    <Compile Include="Migrations\201905190048565_RenameContactoesTableToContactosTable.Designer.cs">
+      <DependentUpon>201905190048565_RenameContactoesTableToContactosTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190050150_RenameSolucionesTecnologicasTable.cs" />
+    <Compile Include="Migrations\201905190050150_RenameSolucionesTecnologicasTable.Designer.cs">
+      <DependentUpon>201905190050150_RenameSolucionesTecnologicasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190051357_RenameTiposEmpresaTable.cs" />
+    <Compile Include="Migrations\201905190051357_RenameTiposEmpresaTable.Designer.cs">
+      <DependentUpon>201905190051357_RenameTiposEmpresaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190102009_NotNullnameColumnContactosTable.cs" />
+    <Compile Include="Migrations\201905190102009_NotNullnameColumnContactosTable.Designer.cs">
+      <DependentUpon>201905190102009_NotNullnameColumnContactosTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.cs" />
+    <Compile Include="Migrations\201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.Designer.cs">
+      <DependentUpon>201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Contacto.cs" />
+    <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\EspecialidadesEmpresa.cs" />
+    <Compile Include="Model\SolucionTecnologica.cs" />
+    <Compile Include="Model\TipoEmpresa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905190017114_CreateEmpresasTable.resx">
+      <DependentUpon>201905190017114_CreateEmpresasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190019358_CreateSolucionesTecnologicasTable.resx">
+      <DependentUpon>201905190019358_CreateSolucionesTecnologicasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190023312_CreateContactosTable.resx">
+      <DependentUpon>201905190023312_CreateContactosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190024415_CreateTiposEmpresaTable.resx">
+      <DependentUpon>201905190024415_CreateTiposEmpresaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190026011_CreateEspecialidadesEmpresasTable.resx">
+      <DependentUpon>201905190026011_CreateEspecialidadesEmpresasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190029235_CreateOneToManyRelationshipBetweenEmpresasAndSolucionesTecnologicasTables.resx">
+      <DependentUpon>201905190029235_CreateOneToManyRelationshipBetweenEmpresasAndSolucionesTecnologicasTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190031098_CreateOneToManyRelationshipBetweenEmpresasAndContactosTables.resx">
+      <DependentUpon>201905190031098_CreateOneToManyRelationshipBetweenEmpresasAndContactosTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190039140_CreateOnoToZeroRelationshipBetweenEmpresasAndTipoEmpresasTable.resx">
+      <DependentUpon>201905190039140_CreateOnoToZeroRelationshipBetweenEmpresasAndTipoEmpresasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190046382_CreateManyToManyRelationshipBetweenEmpresasAndEspecialidadesEmpresasTable.resx">
+      <DependentUpon>201905190046382_CreateManyToManyRelationshipBetweenEmpresasAndEspecialidadesEmpresasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190048565_RenameContactoesTableToContactosTable.resx">
+      <DependentUpon>201905190048565_RenameContactoesTableToContactosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190050150_RenameSolucionesTecnologicasTable.resx">
+      <DependentUpon>201905190050150_RenameSolucionesTecnologicasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190051357_RenameTiposEmpresaTable.resx">
+      <DependentUpon>201905190051357_RenameTiposEmpresaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190102009_NotNullnameColumnContactosTable.resx">
+      <DependentUpon>201905190102009_NotNullnameColumnContactosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.resx">
+      <DependentUpon>201905200044240_ChangeManyToManyTableEmpresasAndEspecialidadesEmpresaTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

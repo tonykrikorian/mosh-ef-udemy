@@ -57,6 +57,8 @@
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Genre.cs" />
     <Compile Include="Entities\Video.cs" />
+    <Compile Include="EntityConfiguration\GenreConfiguration.cs" />
+    <Compile Include="EntityConfiguration\VideoConfiguration.cs" />
     <Compile Include="Migrations\201905150110265_InitialModel.cs" />
     <Compile Include="Migrations\201905150110265_InitialModel.Designer.cs">
       <DependentUpon>201905150110265_InitialModel.cs</DependentUpon>
@@ -113,6 +115,18 @@
     <Compile Include="Migrations\201905182034132_AddClasificationColumnToVideosTable.Designer.cs">
       <DependentUpon>201905182034132_AddClasificationColumnToVideosTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905212234206_CreateOneToZeroRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212234206_CreateOneToZeroRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212234206_CreateOneToZeroRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212247294_SetColumnNameNotNullVideosTable.cs" />
+    <Compile Include="Migrations\201905212247294_SetColumnNameNotNullVideosTable.Designer.cs">
+      <DependentUpon>201905212247294_SetColumnNameNotNullVideosTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212303207_OneToOneRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212303207_OneToOneRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212303207_OneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
     <Compile Include="Program.cs" />
@@ -165,6 +179,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905182034132_AddClasificationColumnToVideosTable.resx">
       <DependentUpon>201905182034132_AddClasificationColumnToVideosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212234206_CreateOneToZeroRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212234206_CreateOneToZeroRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212247294_SetColumnNameNotNullVideosTable.resx">
+      <DependentUpon>201905212247294_SetColumnNameNotNullVideosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212303207_OneToOneRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212303207_OneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

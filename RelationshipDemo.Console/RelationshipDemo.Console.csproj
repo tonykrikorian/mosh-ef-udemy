@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13A7F70B-2BA0-49E5-AD0D-AAA9EC9D53B1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RelationshipDemo.Console</RootNamespace>
+    <AssemblyName>RelationshipDemo.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Genre.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\Video.cs" />
+    <Compile Include="EntityConfiguration\GenreConfiguration.cs" />
+    <Compile Include="EntityConfiguration\VideoConfiguration.cs" />
+    <Compile Include="Migrations\201905212326173_CreateVideosTable.cs" />
+    <Compile Include="Migrations\201905212326173_CreateVideosTable.Designer.cs">
+      <DependentUpon>201905212326173_CreateVideosTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212327279_CreateGenresTable.cs" />
+    <Compile Include="Migrations\201905212327279_CreateGenresTable.Designer.cs">
+      <DependentUpon>201905212327279_CreateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212330554_CreateManyToManyRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212330554_CreateManyToManyRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212330554_CreateManyToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212332103_DeleteManyToManyRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212332103_DeleteManyToManyRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212332103_DeleteManyToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212335077_CreateOneToOneRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212335077_CreateOneToOneRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212335077_CreateOneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212338419_AddClassificationColumnToVideosTable.cs" />
+    <Compile Include="Migrations\201905212338419_AddClassificationColumnToVideosTable.Designer.cs">
+      <DependentUpon>201905212338419_AddClassificationColumnToVideosTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212341239_DeleteOneToOneRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212341239_DeleteOneToOneRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212341239_DeleteOneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905212352590_CreateOneToManyRelationshipBetweenVideosAndGenresTables.cs" />
+    <Compile Include="Migrations\201905212352590_CreateOneToManyRelationshipBetweenVideosAndGenresTables.Designer.cs">
+      <DependentUpon>201905212352590_CreateOneToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220006049_ModifyVideoTable.cs" />
+    <Compile Include="Migrations\201905220006049_ModifyVideoTable.Designer.cs">
+      <DependentUpon>201905220006049_ModifyVideoTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220009111_ModifyNameColumnInGenreTable.cs" />
+    <Compile Include="Migrations\201905220009111_ModifyNameColumnInGenreTable.Designer.cs">
+      <DependentUpon>201905220009111_ModifyNameColumnInGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220012029_CreateTagTable.cs" />
+    <Compile Include="Migrations\201905220012029_CreateTagTable.Designer.cs">
+      <DependentUpon>201905220012029_CreateTagTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905220016411_AddManyToManyRelationshipBetweenVideosAndTagsTables.cs" />
+    <Compile Include="Migrations\201905220016411_AddManyToManyRelationshipBetweenVideosAndTagsTables.Designer.cs">
+      <DependentUpon>201905220016411_AddManyToManyRelationshipBetweenVideosAndTagsTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlutoContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905212326173_CreateVideosTable.resx">
+      <DependentUpon>201905212326173_CreateVideosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212327279_CreateGenresTable.resx">
+      <DependentUpon>201905212327279_CreateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212330554_CreateManyToManyRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212330554_CreateManyToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212332103_DeleteManyToManyRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212332103_DeleteManyToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212335077_CreateOneToOneRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212335077_CreateOneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212338419_AddClassificationColumnToVideosTable.resx">
+      <DependentUpon>201905212338419_AddClassificationColumnToVideosTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212341239_DeleteOneToOneRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212341239_DeleteOneToOneRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905212352590_CreateOneToManyRelationshipBetweenVideosAndGenresTables.resx">
+      <DependentUpon>201905212352590_CreateOneToManyRelationshipBetweenVideosAndGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220006049_ModifyVideoTable.resx">
+      <DependentUpon>201905220006049_ModifyVideoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220009111_ModifyNameColumnInGenreTable.resx">
+      <DependentUpon>201905220009111_ModifyNameColumnInGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220012029_CreateTagTable.resx">
+      <DependentUpon>201905220012029_CreateTagTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905220016411_AddManyToManyRelationshipBetweenVideosAndTagsTables.resx">
+      <DependentUpon>201905220016411_AddManyToManyRelationshipBetweenVideosAndTagsTables.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

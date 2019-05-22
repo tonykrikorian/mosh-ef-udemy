@@ -5,6 +5,7 @@ namespace EF6.CodeFirstFromDB.Console
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using EF6.CodeFirstFromDB.Console.Entities;
+    using EF6.CodeFirstFromDB.Console.EntityConfiguration;
 
     public partial class PlutoContext : DbContext
     {
@@ -30,6 +31,13 @@ namespace EF6.CodeFirstFromDB.Console
                 .HasMany(e => e.Tags)
                 .WithMany(e => e.Courses)
                 .Map(m => m.ToTable("TagCourses").MapLeftKey("Course_Id").MapRightKey("Tag_Id"));
+
+           
+
+            modelBuilder.Configurations.Add(new VideoConfiguration());
+
+       
+          
         }
     }
 }

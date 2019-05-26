@@ -13,7 +13,7 @@ namespace RelationshipDemo.Console
     {
         public PlutoContext():base("name=PlutoContext")
         {
-
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Video> Videos { get; set; }
